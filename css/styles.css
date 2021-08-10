@@ -7,4 +7,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+}
 /*# sourceMappingURL=styles.css.map */
