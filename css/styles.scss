@@ -14,4 +14,21 @@ $white: hsl(0, 0%, 100%);
 
 body {
     font-family: 'Inter', sans-serif;
+    height: 100vh;
+}
+
+.bg-img {
+    background-image: url('../assets/mobile/bg-image-daytime.jpg');
+    background-size: cover;
+    background-position: bottom;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    @media(min-width: 481px) {
+        background-image: url('../assets/tablet/bg-image-daytime.jpg');
+    }
+
+    @media(min-width: 769px) {
+        background-image: url('../assets/desktop/bg-image-daytime.jpg');
+    }
 }
