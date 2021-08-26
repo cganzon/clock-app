@@ -62,9 +62,14 @@ body {
   }
 }
 
-.quote-container {
+.main-content {
   width: 86.4%;
+  max-width: 75rem;
   margin: 0 auto;
+}
+
+.quote-container {
+  max-width: 35.813rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,6 +82,12 @@ body {
   padding-top: 2rem;
 }
 
+@media (min-width: 481px) {
+  .quote-container {
+    padding-top: 3.5rem;
+  }
+}
+
 .quote-container .quote {
   font-size: 0.75rem;
   font-weight: 400;
@@ -84,9 +95,23 @@ body {
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 481px) {
+  .quote-container .quote {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.813rem;
+  }
+}
+
 .quote-container .author {
   font-size: 0.75rem;
   font-weight: 700;
+}
+
+@media (min-width: 481px) {
+  .quote-container .author {
+    font-size: 1.125rem;
+  }
 }
 
 .quote-container .refresh {
@@ -99,17 +124,17 @@ body {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.quote-container .refresh:hover, .quote-container .refresh:focus {
+.quote-container .refresh:hover, .quote-container .refresh:focus-visible {
   cursor: pointer;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
 }
 
-.quote-container .refresh:hover path, .quote-container .refresh:focus path {
+.quote-container .refresh:hover path, .quote-container .refresh:focus-visible path {
   opacity: 1;
 }
 
-.quote-container .refresh:focus {
+.quote-container .refresh:focus-visible {
   outline: none;
   -webkit-box-shadow: 0px 3px 0px -1px white;
   box-shadow: 0px 3px 0px -1px white;
