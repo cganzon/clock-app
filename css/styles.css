@@ -11,6 +11,7 @@
 body {
   font-family: 'Inter', sans-serif;
   height: 100vh;
+  color: white;
 }
 
 .bg-img {
@@ -59,5 +60,58 @@ body {
   .bg-img-night {
     background-image: url("../assets/desktop/bg-image-nighttime.jpg");
   }
+}
+
+.quote-container {
+  width: 86.4%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.quote-container .quote {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.quote-container .author {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.quote-container .refresh {
+  background: transparent;
+  border: none;
+  margin-left: 1.042rem;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.quote-container .refresh:hover, .quote-container .refresh:focus {
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.quote-container .refresh:hover path, .quote-container .refresh:focus path {
+  opacity: 1;
+}
+
+.quote-container .refresh:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 3px 0px -1px white;
+  box-shadow: 0px 3px 0px -1px white;
 }
 /*# sourceMappingURL=styles.css.map */
