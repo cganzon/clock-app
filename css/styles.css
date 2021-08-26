@@ -14,7 +14,6 @@ body {
 }
 
 .bg-img {
-  background-image: url("../assets/mobile/bg-image-daytime.jpg");
   background-size: cover;
   background-position: bottom;
   position: absolute;
@@ -22,15 +21,36 @@ body {
   z-index: -1;
 }
 
+.bg-img-day {
+  background-image: url("../assets/mobile/bg-image-daytime.jpg");
+}
+
 @media (min-width: 481px) {
-  .bg-img {
+  .bg-img-day {
     background-image: url("../assets/tablet/bg-image-daytime.jpg");
   }
 }
 
 @media (min-width: 769px) {
-  .bg-img {
+  .bg-img-day {
     background-image: url("../assets/desktop/bg-image-daytime.jpg");
+  }
+}
+
+.bg-img-night {
+  background-image: url("../assets/mobile/bg-image-nighttime.jpg");
+  left: -1rem;
+}
+
+@media (min-width: 481px) {
+  .bg-img-night {
+    background-image: url("../assets/tablet/bg-image-nighttime.jpg");
+  }
+}
+
+@media (min-width: 769px) {
+  .bg-img-night {
+    background-image: url("../assets/desktop/bg-image-nighttime.jpg");
   }
 }
 /*# sourceMappingURL=styles.css.map */
