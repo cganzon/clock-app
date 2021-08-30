@@ -43,7 +43,9 @@
 }
 
 .details-btn {
+    cursor: pointer;
     border: none;
+    background-color: $white;
     width: 7.188rem;
     height: 2.438rem;
     display: flex;
@@ -52,6 +54,19 @@
     border-radius: 1.75rem;
     font-family: inherit;
     margin-bottom: 2.5rem;
+    transition: transform 0.25s;
+    &:hover,
+    &:focus-visible {
+        transform: scale(1.1);
+    }
+
+    &:focus-visible {
+        outline: none;
+        box-shadow: 
+            0px 0px 0px 3px $veryDarkGrey,
+            0px 0px 0px 6px $white;
+    }
+    
     .more-less {
         font-size: 0.75rem;
         font-weight: 700;
