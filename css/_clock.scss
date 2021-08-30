@@ -33,10 +33,37 @@
 }
 
 .clock-bottom {
+    padding-bottom: 3rem;
     .location {
         font-size: 0.938rem;
         font-weight: 700;
         letter-spacing: 0.188rem;
         text-transform: uppercase;
+    }
+}
+
+.details-btn {
+    border: none;
+    width: 7.188rem;
+    height: 2.438rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1.75rem;
+    font-family: inherit;
+    margin-bottom: 2.5rem;
+    .more-less {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.234rem;
+        color: hsla(0, 0%, 0%, 0.5);
+        text-transform: uppercase;
+        margin-left: 1.063rem;
+    }
+
+    .arrow {
+        width: 2rem;
+        margin-right: 0.25rem;
+        transform: rotate(180deg);
     }
 }
