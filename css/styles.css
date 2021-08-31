@@ -161,6 +161,15 @@ body {
           align-items: center;
 }
 
+.clock-top .sun,
+.clock-top .moon {
+  display: none;
+}
+
+.clock-top .show {
+  display: block;
+}
+
 .clock-top .greeting {
   font-size: 0.938rem;
   font-weight: 400;

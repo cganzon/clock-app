@@ -1,6 +1,15 @@
 .clock-top {
     display: flex;
     align-items: center;
+    .sun,
+    .moon {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+    
     .greeting {
         font-size: 0.938rem;
         font-weight: 400;

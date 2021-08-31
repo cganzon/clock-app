@@ -23,6 +23,7 @@ const displayTime = (unixTime) => {
     let convertedTime = `${convertedHours}:${minutes.substr(-2)}`;
     $('.time-left').text(convertedTime);
     $('.am-pm').text(am_pm);
+    displayIcon(hours);
     displayGreeting(hours);
 };
 
@@ -33,6 +34,16 @@ const displayGreeting = hours => {
         $('.greeter').text('Good afternoon');
     } else {
         $('.greeter').text('Good evening');
+    };
+};
+
+const displayIcon = hours => {
+    if(hours >= 5 && hours < 18) {
+        $('.sun').addClass('show');
+        $('.moon').removeClass('show');
+    } else {
+        $('.moon').addClass('show');
+        $('.sun').removeClass('show');
     };
 };
 
