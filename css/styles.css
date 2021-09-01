@@ -20,6 +20,11 @@ body {
   position: absolute;
   inset: 0;
   z-index: -1;
+  display: none;
+}
+
+.show-bg {
+  display: block;
 }
 
 .bg-img::after {

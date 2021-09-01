@@ -23,7 +23,7 @@ const displayTime = (unixTime) => {
     let convertedTime = `${convertedHours}:${minutes.substr(-2)}`;
     $('.time-left').text(convertedTime);
     $('.am-pm').text(am_pm);
-    displayIcon(hours);
+    changeTheme(hours);
     displayGreeting(hours);
 };
 
@@ -37,13 +37,17 @@ const displayGreeting = hours => {
     };
 };
 
-const displayIcon = hours => {
+const changeTheme = hours => {
     if(hours >= 5 && hours < 18) {
         $('.sun').addClass('show');
         $('.moon').removeClass('show');
+        $('.bg-img-day').addClass('show-bg');
+        $('.bg-img-night').removeClass('show-bg');
     } else {
         $('.moon').addClass('show');
         $('.sun').removeClass('show');
+        $('.bg-img-night').addClass('show-bg');
+        $('.bg-img-day').removeClass('show-bg');
     };
 };
 
