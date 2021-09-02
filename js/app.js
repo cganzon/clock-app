@@ -14,6 +14,17 @@ const getTimeData = () => {
     });
 };
 
+const getLocationData = () => {
+    $.getJSON('https://freegeoip.app/json/', data => {
+        console.log(data);
+        if(data.country_code === 'US') {
+            $('.city-state').text(`${data.city}, ${data.region_code}`);
+        } else {
+            $('.city-state').text(`${data.city}, ${data.country_code}`);
+        };
+    });
+};
+
 const displayTime = (unixTime) => {
     let date = new Date(unixTime * 1000);
     let hours = date.getHours();
@@ -55,4 +66,5 @@ $('.refresh').click(() => getRandQuote());
 
 getRandQuote();
 getTimeData();
+getLocationData();
 setInterval(() => getTimeData(), 1000);
