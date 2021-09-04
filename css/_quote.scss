@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 2rem;
+    transition: opacity 0.5s;
     @media(min-width: 481px) {
         padding-top: 3.5rem;
     }
@@ -47,4 +48,8 @@
             box-shadow: 0px 3px 0px -1px $white;
         }
     }
+}
+
+.hide-quote {
+    opacity: 0;
 }

@@ -85,6 +85,15 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 3rem;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.move-up {
+  -webkit-transform: translateY(-16rem);
+          transform: translateY(-16rem);
 }
 
 .quote-container {
@@ -99,6 +108,8 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-top: 2rem;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 @media (min-width: 481px) {
@@ -157,6 +168,10 @@ body {
   outline: none;
   -webkit-box-shadow: 0px 3px 0px -1px white;
   box-shadow: 0px 3px 0px -1px white;
+}
+
+.hide-quote {
+  opacity: 0;
 }
 
 .clock-top {

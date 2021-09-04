@@ -65,6 +65,8 @@ const changeTheme = hours => {
 $('.refresh').click(() => getRandQuote());
 
 $('.details-btn').click(() => {
+    $('.quote-container').toggleClass('hide-quote');
+    $('.main-content').toggleClass('move-up');
     $('.arrow').toggleClass('rotate');
     if($('.more-less').text() === 'More') {
         $('.more-less').text('Less');
