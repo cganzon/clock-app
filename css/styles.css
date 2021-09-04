@@ -277,6 +277,9 @@ body {
 .details-btn .arrow {
   width: 2rem;
   margin-right: 0.25rem;
+}
+
+.details-btn .rotate {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }

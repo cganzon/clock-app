@@ -64,6 +64,15 @@ const changeTheme = hours => {
 
 $('.refresh').click(() => getRandQuote());
 
+$('.details-btn').click(() => {
+    $('.arrow').toggleClass('rotate');
+    if($('.more-less').text() === 'More') {
+        $('.more-less').text('Less');
+    } else {
+        $('.more-less').text('More');
+    };
+});
+
 getRandQuote();
 getTimeData();
 getLocationData();
