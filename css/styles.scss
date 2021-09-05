@@ -16,6 +16,7 @@ body {
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     color: $white;
+    overflow-y: hidden;
 }
 
 .bg-img {
@@ -81,3 +82,4 @@ body {
 
 @import './quote';
 @import './clock';
+@import './details';

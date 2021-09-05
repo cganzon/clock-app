@@ -12,6 +12,7 @@ body {
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
   color: white;
+  overflow-y: hidden;
 }
 
 .bg-img {
@@ -299,5 +300,24 @@ body {
 .details-btn .rotate {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.details {
+  width: 100%;
+  height: 16rem;
+  position: absolute;
+  bottom: -16rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.details-bg-day {
+  background-color: white;
+  opacity: 0.75;
+}
+
+.details-bg-night {
+  background-color: black;
+  opacity: 0.75;
 }
 /*# sourceMappingURL=styles.css.map */

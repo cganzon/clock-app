@@ -53,12 +53,16 @@ const changeTheme = hours => {
         $('.sun').addClass('show');
         $('.moon').removeClass('show');
         $('.bg-img-day').addClass('show-bg');
+        $('.details').addClass('details-bg-day');
         $('.bg-img-night').removeClass('show-bg');
+        $('.details').removeClass('details-bg-night');
     } else {
         $('.moon').addClass('show');
         $('.sun').removeClass('show');
         $('.bg-img-night').addClass('show-bg');
+        $('.details').addClass('details-bg-night');
         $('.bg-img-day').removeClass('show-bg');
+        $('.details').removeClass('details-bg-day');
     };
 };
 
@@ -68,6 +72,7 @@ $('.details-btn').click(() => {
     $('.quote-container').toggleClass('hide-quote');
     $('.main-content').toggleClass('move-up');
     $('.arrow').toggleClass('rotate');
+    $('.details').toggleClass('move-up');
     if($('.more-less').text() === 'More') {
         $('.more-less').text('Less');
     } else {
