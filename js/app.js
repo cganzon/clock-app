@@ -70,9 +70,23 @@ $('.refresh').click(() => getRandQuote());
 
 $('.details-btn').click(() => {
     $('.quote-container').toggleClass('hide-quote');
-    $('.main-content').toggleClass('move-up');
     $('.arrow').toggleClass('rotate');
-    $('.details').toggleClass('move-up');
+    if(!$('.main-content').hasClass('move-up')) {
+        $('.main-content').addClass('move-up');
+    } else {
+        setTimeout(() => {
+            $('.main-content').removeClass('move-up');
+        }, 500);
+    };
+
+    if($('.details').hasClass('hide-details')) {
+        $('.details').removeClass('hide-details');
+        $('.details').addClass('show-details');
+    } else if($('.details').hasClass('show-details')) {
+        $('.details').removeClass('show-details');
+        $('.details').addClass('hide-details');
+    };
+
     if($('.more-less').text() === 'More') {
         $('.more-less').text('Less');
     } else {
