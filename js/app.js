@@ -54,15 +54,19 @@ const changeTheme = hours => {
         $('.moon').removeClass('show');
         $('.bg-img-day').addClass('show-bg');
         $('.details').addClass('details-bg-day');
+        $('.detail-title').addClass('detail-text-day');
         $('.bg-img-night').removeClass('show-bg');
         $('.details').removeClass('details-bg-night');
+        $('.detail-title').removeClass('detail-text-night');
     } else {
         $('.moon').addClass('show');
         $('.sun').removeClass('show');
         $('.bg-img-night').addClass('show-bg');
         $('.details').addClass('details-bg-night');
+        $('.detail-title').addClass('detail-text-night');
         $('.bg-img-day').removeClass('show-bg');
         $('.details').removeClass('details-bg-day');
+        $('.detail-title').removeClass('detail-text-day');
     };
 };
 
@@ -70,23 +74,9 @@ $('.refresh').click(() => getRandQuote());
 
 $('.details-btn').click(() => {
     $('.quote-container').toggleClass('hide-quote');
+    $('.main-content').toggleClass('move-up');
+    $('.details').toggleClass('move-up');
     $('.arrow').toggleClass('rotate');
-    if(!$('.main-content').hasClass('move-up')) {
-        $('.main-content').addClass('move-up');
-    } else {
-        setTimeout(() => {
-            $('.main-content').removeClass('move-up');
-        }, 500);
-    };
-
-    if($('.details').hasClass('hide-details')) {
-        $('.details').removeClass('hide-details');
-        $('.details').addClass('show-details');
-    } else if($('.details').hasClass('show-details')) {
-        $('.details').removeClass('show-details');
-        $('.details').addClass('hide-details');
-    };
-
     if($('.more-less').text() === 'More') {
         $('.more-less').text('Less');
     } else {
