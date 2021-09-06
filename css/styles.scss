@@ -12,10 +12,13 @@ $white: hsl(0, 0%, 100%);
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    min-height: -webkit-fill-available;
-    min-height: 100vh;
+    height: 100%;
     color: $white;
     overflow-y: hidden;
 }
@@ -25,8 +28,7 @@ body {
     background-position: bottom;
     position: absolute;
     width: 100%;
-    min-height: -webkit-fill-available;
-    min-height: 100vh;
+    height: 100%;
     z-index: -1;
     display: none;
 }
@@ -39,8 +41,7 @@ body {
     content: '';
     position: absolute;
     width: 100%;
-    min-height: -webkit-fill-available;
-    min-height: 100vh;
+    height: 100%;
     background-color: hsla(0, 0%, 0%, 0.4);
 }
 
@@ -70,8 +71,7 @@ body {
 .main-content {
     width: 86.4%;
     max-width: 75rem;
-    min-height: -webkit-fill-available;
-    min-height: 100vh;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
