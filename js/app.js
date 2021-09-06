@@ -16,7 +16,7 @@ const getTimeData = () => {
 
 const getLocationData = () => {
     $.getJSON('https://freegeoip.app/json/', data => {
-        console.log(data);
+        // console.log(data);
         if(data.country_code === 'US') {
             $('.city-state').text(`${data.city}, ${data.region_code}`);
         } else {
@@ -74,8 +74,19 @@ $('.refresh').click(() => getRandQuote());
 
 $('.details-btn').click(() => {
     $('.quote-container').toggleClass('hide-quote');
-    $('.main-content').toggleClass('move-up');
-    $('.details').toggleClass('move-up');
+    if(!$('.main-content').hasClass('move-up') && $('.details').hasClass('hide-details')) {
+        $('.main-content').addClass('move-up');
+        setTimeout(() => {
+            $('.details').removeClass('hide-details');
+            $('.details').addClass('show-details');
+        }, 400);
+    } else {
+        setTimeout(() => {
+            $('.main-content').removeClass('move-up');
+        }, 400);
+        $('.details').removeClass('show-details');
+        $('.details').addClass('hide-details');
+    }
     $('.arrow').toggleClass('rotate');
     if($('.more-less').text() === 'More') {
         $('.more-less').text('Less');
