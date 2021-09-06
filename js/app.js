@@ -11,6 +11,7 @@ const getTimeData = () => {
         let timeZone = data.abbreviation;
         $('.timezone').text(timeZone);
         displayTime(data.unixtime);
+        displayDetails(data.timezone, data.day_of_year, data.day_of_week, data.week_number);
     });
 };
 
@@ -48,25 +49,32 @@ const displayGreeting = hours => {
     };
 };
 
+const displayDetails = (timezone, dayOfYear, dayOfWeek, weekNumber) => {
+    $('.current-timezone').text(timezone);
+    $('.day-of-year').text(dayOfYear);
+    $('.day-of-week').text(dayOfWeek + 1);
+    $('.week-number').text(weekNumber);
+};
+
 const changeTheme = hours => {
     if(hours >= 5 && hours < 18) {
         $('.sun').addClass('show');
         $('.moon').removeClass('show');
         $('.bg-img-day').addClass('show-bg');
         $('.details').addClass('details-bg-day');
-        $('.detail-title').addClass('detail-text-day');
+        $('.detail-title, .detail-value').addClass('detail-text-day');
         $('.bg-img-night').removeClass('show-bg');
         $('.details').removeClass('details-bg-night');
-        $('.detail-title').removeClass('detail-text-night');
+        $('.detail-title, .detail-value').removeClass('detail-text-night');
     } else {
         $('.moon').addClass('show');
         $('.sun').removeClass('show');
         $('.bg-img-night').addClass('show-bg');
         $('.details').addClass('details-bg-night');
-        $('.detail-title').addClass('detail-text-night');
+        $('.detail-title, .detail-value').addClass('detail-text-night');
         $('.bg-img-day').removeClass('show-bg');
         $('.details').removeClass('details-bg-day');
-        $('.detail-title').removeClass('detail-text-day');
+        $('.detail-title, .detail-value').removeClass('detail-text-day');
     };
 };
 
