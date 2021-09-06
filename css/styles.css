@@ -10,8 +10,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  min-height: -webkit-fill-available;
   min-height: 100vh;
-  max-height: -webkit-fill-available;
   color: white;
   overflow-y: hidden;
 }
@@ -21,8 +21,8 @@ body {
   background-position: bottom;
   position: absolute;
   width: 100%;
+  min-height: -webkit-fill-available;
   min-height: 100vh;
-  max-height: -webkit-fill-available;
   z-index: -1;
   display: none;
 }
@@ -35,8 +35,8 @@ body {
   content: '';
   position: absolute;
   width: 100%;
+  min-height: -webkit-fill-available;
   min-height: 100vh;
-  max-height: -webkit-fill-available;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -76,8 +76,8 @@ body {
 .main-content {
   width: 86.4%;
   max-width: 75rem;
+  min-height: -webkit-fill-available;
   min-height: 100vh;
-  max-height: -webkit-fill-available;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
