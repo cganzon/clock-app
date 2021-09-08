@@ -27,8 +27,8 @@ body {
     background-size: cover;
     background-position: bottom;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    inset: 0;
+    left: -3px;
     z-index: -1;
     display: none;
 }
@@ -58,7 +58,6 @@ body {
 
 .bg-img-night {
     background-image: url('../assets/mobile/bg-image-nighttime.jpg');
-    left: -1rem;
     @media(min-width: 481px) {
         background-image: url('../assets/tablet/bg-image-nighttime.jpg');
     }
