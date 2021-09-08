@@ -4,16 +4,41 @@
     position: absolute;
     bottom: 0;
     z-index: -1;
+    .details-container {
+        width: 86.4%;
+        max-width: 75rem;
+        margin: 0 auto;
+        .details-wrapper {
+            max-width: 52.75rem;
+            padding-top: 2rem;
+            .detail-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+                padding-top: 1rem;
+                .detail-title{
+                    text-transform: uppercase;
+                    font-size: 0.625rem;
+                    letter-spacing: 0.125rem;
+                    font-weight: 400;
+                }
+
+                .detail-value {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
 }
 
 .details-bg-day {
-    background-color: $white;
-    opacity: 0;
+    background-color: hsla(0, 0%, 100%, 0.75);
 }
 
 .details-bg-night {
-    background-color: $black;
-    opacity: 0;
+    background-color: hsla(0, 0%, 0%, 0.75);
 }
 
 .detail-text-day {
@@ -25,7 +50,7 @@
 }
 
 .show-details {
-    opacity: 0.75;
+    opacity: 1;
     transition: 0.4s;
 }
 
