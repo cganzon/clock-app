@@ -263,6 +263,12 @@ body {
   padding-bottom: 3rem;
 }
 
+@media (min-width: 768px) {
+  .clock-bottom {
+    padding-bottom: 5rem;
+  }
+}
+
 .clock-bottom .location {
   font-size: 0.938rem;
   font-weight: 700;
@@ -300,6 +306,14 @@ body {
   transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
+@media (min-width: 768px) {
+  .details-btn {
+    margin-bottom: 4rem;
+    width: 9.125rem;
+    height: 3.5rem;
+  }
+}
+
 .details-btn:hover, .details-btn:focus-visible {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -320,9 +334,23 @@ body {
   margin-left: 1.063rem;
 }
 
+@media (min-width: 768px) {
+  .details-btn .more-less {
+    font-size: 1rem;
+    margin-left: 1.313rem;
+  }
+}
+
 .details-btn .arrow {
   width: 2rem;
   margin-right: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .details-btn .arrow {
+    width: 2.5rem;
+    margin-right: 0.563rem;
+  }
 }
 
 .details-btn .rotate {

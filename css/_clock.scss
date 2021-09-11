@@ -53,6 +53,9 @@
 
 .clock-bottom {
     padding-bottom: 3rem;
+    @media(min-width: 768px) {
+        padding-bottom: 5rem;
+    }
     .location {
         font-size: 0.938rem;
         font-weight: 700;
@@ -77,6 +80,11 @@
     font-family: inherit;
     margin-bottom: 2.5rem;
     transition: transform 0.25s;
+    @media(min-width: 768px) {
+        margin-bottom: 4rem;
+        width: 9.125rem;
+        height: 3.5rem;
+    }
     &:hover,
     &:focus-visible {
         transform: scale(1.1);
@@ -96,11 +104,19 @@
         color: hsla(0, 0%, 0%, 0.5);
         text-transform: uppercase;
         margin-left: 1.063rem;
+        @media(min-width: 768px) {
+            font-size: 1rem;
+            margin-left: 1.313rem;
+        }
     }
 
     .arrow {
         width: 2rem;
         margin-right: 0.25rem;
+        @media(min-width: 768px) {
+            width: 2.5rem;
+            margin-right: 0.563rem;
+        }
     }
 
     .rotate {
