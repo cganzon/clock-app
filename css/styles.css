@@ -403,6 +403,17 @@ body {
   padding-top: 2rem;
 }
 
+@media (min-width: 768px) {
+  .details .details-container .details-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 5.063rem;
+            column-gap: 5.063rem;
+    padding-top: 4.5rem;
+  }
+}
+
 .details .details-container .details-wrapper .detail-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -417,6 +428,13 @@ body {
   padding-top: 1rem;
 }
 
+@media (min-width: 768px) {
+  .details .details-container .details-wrapper .detail-wrapper {
+    display: block;
+    padding-top: 3.063rem;
+  }
+}
+
 .details .details-container .details-wrapper .detail-wrapper .detail-title {
   text-transform: uppercase;
   font-size: 0.625rem;
@@ -424,9 +442,21 @@ body {
   font-weight: 400;
 }
 
+@media (min-width: 768px) {
+  .details .details-container .details-wrapper .detail-wrapper .detail-title {
+    font-size: 0.813rem;
+  }
+}
+
 .details .details-container .details-wrapper .detail-wrapper .detail-value {
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .details .details-container .details-wrapper .detail-wrapper .detail-value {
+    font-size: 2.5rem;
+  }
 }
 
 .details-bg-day {

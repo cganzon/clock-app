@@ -14,22 +14,39 @@
         .details-wrapper {
             max-width: 52.75rem;
             padding-top: 2rem;
+            @media(min-width: 768px) {
+                display: flex;
+                column-gap: 5.063rem;
+                padding-top: 4.5rem;
+            }
+
             .detail-wrapper {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 gap: 1rem;
                 padding-top: 1rem;
+                @media(min-width: 768px) {
+                    display: block;
+                    padding-top: 3.063rem;
+                }
+
                 .detail-title{
                     text-transform: uppercase;
                     font-size: 0.625rem;
                     letter-spacing: 0.125rem;
                     font-weight: 400;
+                    @media(min-width: 768px) {
+                        font-size: 0.813rem;
+                    }
                 }
 
                 .detail-value {
                     font-size: 1.25rem;
                     font-weight: 700;
+                    @media(min-width: 768px) {
+                        font-size: 2.5rem;
+                    }
                 }
             }
         }
