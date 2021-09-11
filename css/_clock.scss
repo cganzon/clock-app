@@ -88,6 +88,9 @@
     &:hover,
     &:focus-visible {
         transform: scale(1.1);
+        .arrow circle {
+            fill: hsla(0, 0%, 60%, 1);
+        }
     }
 
     &:focus-visible {
@@ -111,10 +114,16 @@
     }
 
     .arrow {
-        width: 2rem;
-        margin-right: 0.25rem;
+        // margin-right: 0.25rem;
+        g {
+            transform: scale(0.8);
+            transform-origin: center;
+            @media(min-width: 768px) {
+                transform: scale(1);
+            }
+        }
         @media(min-width: 768px) {
-            width: 2.5rem;
+            // transform: scale(1);
             margin-right: 0.563rem;
         }
     }
