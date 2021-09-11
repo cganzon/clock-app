@@ -114,7 +114,6 @@
     }
 
     .arrow {
-        // margin-right: 0.25rem;
         g {
             transform: scale(0.8);
             transform-origin: center;
@@ -122,8 +121,9 @@
                 transform: scale(1);
             }
         }
+
         @media(min-width: 768px) {
-            // transform: scale(1);
+            transform: scale(1);
             margin-right: 0.563rem;
         }
     }

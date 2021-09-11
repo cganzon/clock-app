@@ -361,6 +361,8 @@ body {
 
 @media (min-width: 768px) {
   .details-btn .arrow {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     margin-right: 0.563rem;
   }
 }
