@@ -16,7 +16,6 @@ body {
   font-family: 'Inter', sans-serif;
   height: 100%;
   color: white;
-  overflow: hidden;
 }
 
 .bg-img {
@@ -98,6 +97,13 @@ body {
 .move-up {
   -webkit-transform: translateY(-16rem);
           transform: translateY(-16rem);
+}
+
+@media (min-width: 768px) {
+  .move-up {
+    -webkit-transform: translateY(-27.5rem);
+            transform: translateY(-27.5rem);
+  }
 }
 
 .quote-container {
@@ -378,6 +384,12 @@ body {
   position: absolute;
   bottom: 0;
   z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .details {
+    height: 27.5rem;
+  }
 }
 
 .details .details-container {

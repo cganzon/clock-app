@@ -20,7 +20,6 @@ body {
     font-family: 'Inter', sans-serif;
     height: 100%;
     color: $white;
-    overflow: hidden;
 }
 
 .bg-img {
@@ -81,6 +80,9 @@ body {
 
 .move-up {
     transform: translateY(-16rem);
+    @media(min-width: 768px) {
+        transform: translateY(-27.5rem);
+    }
 }
 
 @import './quote';

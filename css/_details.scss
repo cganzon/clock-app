@@ -4,6 +4,9 @@
     position: absolute;
     bottom: 0;
     z-index: -1;
+    @media(min-width: 768px) {
+        height: 27.5rem;
+    }
     .details-container {
         width: 86.4%;
         max-width: 75rem;
