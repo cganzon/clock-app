@@ -52,17 +52,31 @@
 }
 
 .clock-bottom {
-    padding-bottom: 3rem;
+    margin-bottom: 2.5rem;
     @media(min-width: 768px) {
-        padding-bottom: 5rem;
+        margin-bottom: 4rem;
     }
+
+    @media(min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     .location {
         font-size: 0.938rem;
         font-weight: 700;
         letter-spacing: 0.188rem;
         text-transform: uppercase;
+        padding-bottom: 3rem;
         @media(min-width: 768px) {
             font-size: 1.125rem;
+            padding-bottom: 5rem;
+        }
+
+        @media(min-width: 1024px) {
+            font-size: 1.125rem;
+            padding-bottom: 0;
         }
     }
 }
@@ -78,10 +92,8 @@
     align-items: center;
     border-radius: 1.75rem;
     font-family: inherit;
-    margin-bottom: 2.5rem;
     transition: transform 0.25s;
     @media(min-width: 768px) {
-        margin-bottom: 4rem;
         width: 9.125rem;
         height: 3.5rem;
     }
