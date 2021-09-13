@@ -83,6 +83,10 @@ body {
     @media(min-width: 768px) {
         transform: translateY(-27.5rem);
     }
+
+    @media(min-width: 1024px) {
+        transform: translateY(-25rem);
+    }
 }
 
 @import './quote';
