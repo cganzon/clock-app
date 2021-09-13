@@ -1,3 +1,4 @@
+// Function that generates a random quote from the quotable api
 const getRandQuote = () => {
     $.getJSON('https://api.quotable.io/random', data => {
         $('.quote').text(`\"${data.content}\"`);
@@ -5,6 +6,7 @@ const getRandQuote = () => {
     });
 };
 
+// Function that gets time data from the world time api based on the user's ip address
 const getTimeData = () => {
     $.getJSON("http://worldtimeapi.org/api/ip", data => {
         // console.log(data);
@@ -15,6 +17,7 @@ const getTimeData = () => {
     });
 };
 
+// Function that gets the user's location using the freegeoip api
 const getLocationData = () => {
     $.getJSON('https://freegeoip.app/json/', data => {
         // console.log(data);
@@ -26,9 +29,12 @@ const getLocationData = () => {
     });
 };
 
+// Function that converts the timestamp from the world time api into a readable time
 const displayTime = (unixTime) => {
     let date = new Date(unixTime * 1000);
     let hours = date.getHours();
+    
+    // Converts the 24 hour time format to 12 hour time format
     let convertedHours = ((date.getHours() + 11) % 12 + 1);
     let minutes = `0${date.getMinutes()}`;
     let am_pm = (hours >= 12) ? 'pm' : 'am';
@@ -39,6 +45,7 @@ const displayTime = (unixTime) => {
     displayGreeting(hours);
 };
 
+// Function that uses the calculated military to display the correct greeting
 const displayGreeting = hours => {
     if(hours >= 5 && hours < 12) {
         $('.greeter').text('Good morning');
@@ -49,6 +56,7 @@ const displayGreeting = hours => {
     };
 };
 
+// Function that uses the data from the world time api to show additional time details to the user
 const displayDetails = (timezone, dayOfYear, dayOfWeek, weekNumber) => {
     $('.current-timezone').text(timezone);
     $('.day-of-year').text(dayOfYear);
@@ -56,6 +64,7 @@ const displayDetails = (timezone, dayOfYear, dayOfWeek, weekNumber) => {
     $('.week-number').text(weekNumber);
 };
 
+// Function that uses the military hour from the displayTime function to change the theme of the page between day and night
 const changeTheme = hours => {
     if(hours >= 5 && hours < 18) {
         $('.sun').addClass('show');
@@ -78,8 +87,11 @@ const changeTheme = hours => {
     };
 };
 
+// Generates a new random quote whenever the refresh button is clicked
 $('.refresh').click(() => getRandQuote());
 
+// Moves the quote and clock sections of the page up and down whenever the More/Less button is clicked
+// Also makes the additional time details section visible or hidden
 $('.details-btn').click(() => {
     $('.quote-container').toggleClass('hide-quote');
     if(!$('.main-content').hasClass('move-up') && $('.details').hasClass('hide-details')) {
@@ -106,4 +118,6 @@ $('.details-btn').click(() => {
 getRandQuote();
 getTimeData();
 getLocationData();
+
+// Calls the getTimeData function every second so the time and additional details can update automatically
 setInterval(() => getTimeData(), 1000);
