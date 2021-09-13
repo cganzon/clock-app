@@ -17,12 +17,37 @@
         max-width: 75rem;
         margin: 0 auto;
         .details-wrapper {
-            max-width: 52.75rem;
             padding-top: 2rem;
             @media(min-width: 768px) {
                 display: flex;
                 column-gap: 5.063rem;
                 padding-top: 4.5rem;
+            }
+
+            @media(min-width: 1024px) {
+                padding-top: 2.5rem;
+            }
+
+            @media(min-width: 1201px) {
+                column-gap: 0;
+                .details-left {
+                    padding-right: 9.188rem;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 240px;
+                        right: 0;
+                        top: 2.4rem;
+                        background-color: $veryDarkGrey;
+                        opacity: 0.25;
+                    }
+                }
+
+                .details-right {
+                    padding-left: 5.875rem;
+                }
             }
 
             .detail-wrapper {
@@ -36,6 +61,10 @@
                     padding-top: 3.063rem;
                 }
 
+                @media(min-width: 1024px) {
+                    padding-top: 2.625rem;
+                }
+
                 .detail-title{
                     text-transform: uppercase;
                     font-size: 0.625rem;
@@ -44,6 +73,11 @@
                     @media(min-width: 768px) {
                         font-size: 0.813rem;
                     }
+
+                    @media(min-width: 1024px) {
+                        font-size: 0.938rem;
+                        margin-bottom: 0.563rem;
+                    }
                 }
 
                 .detail-value {
@@ -51,6 +85,10 @@
                     font-weight: 700;
                     @media(min-width: 768px) {
                         font-size: 2.5rem;
+                    }
+
+                    @media(min-width: 1024px) {
+                        font-size: 3.45rem;
                     }
                 }
             }
