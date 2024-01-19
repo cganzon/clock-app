@@ -19,14 +19,14 @@ const getTimeData = () => {
 
 // Function that gets the user's location using the freegeoip api
 const getLocationData = () => {
-    $.getJSON('https://freegeoip.app/json/', data => {
-        // console.log(data);
+    $.getJSON('https://ipapi.co/json/', data => {
+        console.log(data);
         if(data.country_code === 'US') {
-            $('.city-state').text(`${data.city}, ${data.region_code}`);
+            $('.city-state').text(`${data.city}, ${data.region}`);
         } else {
-            $('.city-state').text(`${data.city}, ${data.country_code}`);
+            $('.city-state').text(`${data.city}, ${data.country_name}`);
         };
-    });
+    })
 };
 
 // Function that converts the timestamp from the world time api into a readable time
