@@ -9,7 +9,6 @@ const getRandQuote = () => {
 // Function that gets time data from the world time api based on the user's ip address
 const getTimeData = () => {
     $.getJSON("http://worldtimeapi.org/api/ip", data => {
-        // console.log(data);
         let timeZone = data.abbreviation;
         $('.timezone').text(timeZone);
         displayTime(data.unixtime);
@@ -20,7 +19,6 @@ const getTimeData = () => {
 // Function that gets the user's location using the freegeoip api
 const getLocationData = () => {
     $.getJSON('https://ipapi.co/json/', data => {
-        console.log(data);
         if(data.country_code === 'US') {
             $('.city-state').text(`${data.city}, ${data.region}`);
         } else {
