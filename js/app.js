@@ -58,7 +58,8 @@ const displayGreeting = hours => {
 const displayDetails = (timezone, dayOfYear, dayOfWeek, weekNumber) => {
     $('.current-timezone').text(timezone);
     $('.day-of-year').text(dayOfYear);
-    $('.day-of-week').text(dayOfWeek);
+    console.log(dayOfWeek)
+    $('.day-of-week').text(dayOfWeek === 0 ? 7 : dayOfWeek);
     $('.week-number').text(weekNumber);
 };
 
